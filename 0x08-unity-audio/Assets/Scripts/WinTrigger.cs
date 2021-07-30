@@ -20,6 +20,7 @@ public class WinTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            playerController.playVictory();
             playerController.x = 0;
             playerController.y = 0;
             animator.SetBool("Suelo", true);

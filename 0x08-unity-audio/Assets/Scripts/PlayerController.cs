@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,16 +11,20 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public float jumpForce = 5.4f;
     public bool canJump;
-    public bool canMove;
+    public bool canMove, canPause;
     public float x, y;
     public Animator animator;
     public GameObject pauseMenu, optionsMenu, feid, fadeOut, cam1, cam2;
     public Timer timer;
     public string SceneText;
+    public AudioSource footsteps, landing, victoryPiano, cheery;
+    [SerializeField] AudioMixerSnapshot paused;
+    [SerializeField] AudioMixerSnapshot unpaused;
 
     // Start is called before the first frame update
     void Start()
     {
+        canPause = false;
         timer.finish = true;
         cam1.SetActive(false);
         cam2.SetActive(true);
@@ -46,7 +51,23 @@ public class PlayerController : MonoBehaviour
                 SetPosition();
             }
             animator.SetFloat("Blend", y);
-        }        
+        }
+            
+        if(Input.GetKeyDown(KeyCode.Escape) && canPause)
+        {
+            if(Time.timeScale == 1)
+            {
+                paused.TransitionTo(.01f);
+                pauseMenu.SetActive(true);
+                canMove = false;
+                Time.timeScale = 0;
+            }
+            else
+            {
+                unpaused.TransitionTo(.01f);
+                ResumeButton();
+            }
+        }
     }
 
     private void FixedUpdate() 
@@ -56,12 +77,6 @@ public class PlayerController : MonoBehaviour
             transform.Translate(0, 0, y * Time.deltaTime * velMov);
             transform.Rotate(0, x * Time.deltaTime * velRot, 0);
 
-            if(Input.GetKeyDown(KeyCode.P))
-            {
-                pauseMenu.SetActive(true);
-                canMove = false;
-                Time.timeScale = 0;
-            }
         }
         if(canMove && canJump)
         {
@@ -86,11 +101,13 @@ public class PlayerController : MonoBehaviour
             x = 0;
             y = 0;
         }
+
     }
 
     private void OnCollisionEnter(Collision other)
     {
         canJump = true;
+        landing.Play();
     }
 
     private void OnCollisionExit(Collision other)
@@ -127,6 +144,8 @@ public class PlayerController : MonoBehaviour
 
     public void ResumeButton()
     {
+        unpaused.TransitionTo(.01f);
+        optionsMenu.SetActive(false);
         pauseMenu.SetActive(false);
         canMove = true;
         Time.timeScale = 1;
@@ -156,5 +175,21 @@ public class PlayerController : MonoBehaviour
         cam2.SetActive(false);
         timer.finish = false;
         canMove = true;
+        canPause = true;
+    }
+
+    public void PlayFootsteps()
+    {
+        if (canMove && canJump)
+        {
+            footsteps.Play();
+        }
+    }
+
+    public void playVictory()
+    {
+        canPause = false;
+        cheery.Stop();
+        victoryPiano.Play();
     }
 }

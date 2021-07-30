@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - MenuScript
     - PlayerController
+    - SoundScript
     - Timer
     - WinTrigger
     Unity.Rider.Editor.dll:
@@ -19,6 +20,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -56,7 +58,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -73,23 +77,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1424}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 2142}
+      Script: {instanceID: 1692}
     - Class: 114
-      Script: {instanceID: 2310}
+      Script: {instanceID: 2070}
     - Class: 114
-      Script: {instanceID: 2660}
+      Script: {instanceID: 2144}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2312}
     - Class: 114
-      Script: {instanceID: 3084}
+      Script: {instanceID: 2662}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3416}
+    - Class: 114
+      Script: {instanceID: 3454}
+    - Class: 114
+      Script: {instanceID: 3560}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -110,6 +118,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -127,6 +141,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -140,19 +160,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1424}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 1832}
+      Script: {instanceID: 1692}
     - Class: 114
-      Script: {instanceID: 2660}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2070}
     - Class: 114
-      Script: {instanceID: 3084}
+      Script: {instanceID: 2662}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3086}
+    - Class: 114
+      Script: {instanceID: 3416}
+    - Class: 114
+      Script: {instanceID: 3560}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -169,6 +193,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -182,6 +212,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 53d8cb9206a60afbca0d0b97aaedaad8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundScript
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -346,7 +382,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: a2427c253b142452376e6de2894de7d3
+      Hash: 9cba129f61a3429503d79fa24f982e98
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
