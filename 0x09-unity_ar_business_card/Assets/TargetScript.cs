@@ -21,6 +21,6 @@ public class TargetScript : MonoBehaviour
 
     public void OpenYoutube()
     {
-        Application.OpenURL("https://www.youtube.com/channel/UCPDFDlOwFTfPpjoNHFfbuwQ");
+        Application.OpenURL("mailto:jdsw619@gmail.com");
     }
 }

@@ -587,7 +587,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768692308}
   m_CullTransparentMesh: 1
---- !u!21 &1152366985
+--- !u!21 &1113224083
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -596,7 +596,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'HolbieMaterial
 
-    15600'
+    15604'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -680,7 +680,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1152366985}
+  - {fileID: 1113224083}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a18db87d23be763468c1ed0f00f0a3fd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 224db2d3852e7e74f952d26631ed1e70, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
