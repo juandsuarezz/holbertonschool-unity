@@ -18,4 +18,4 @@ This repository contains assignments for the Unity advanced program of Holberton
 7. **[0x09-unity_ar_business_card](https://github.com/juandsuarezz/holbertonschool-unity/tree/main/0x09-unity_ar_business_card)**
 8. **[2D-clone](https://github.com/juandsuarezz/holbertonschool-unity/tree/main/2D-clone)**
 
-2020 - All projects are written by Juan David Suarez ([@juandsuarezw](https://twitter.com/juandsuarezw)) at [Holberton School](https://www.holbertonschool.com/)
+2021 - All projects are written by Juan David Suarez ([@juandsuarezw](https://twitter.com/juandsuarezw)) at [Holberton School](https://www.holbertonschool.com/)
